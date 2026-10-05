@@ -1,0 +1,169 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string name, address;
+    int age;
+    float weight, height;
+
+    cout << "Enter your name: ";
+    cin >> name;
+
+    cout << "Enter your age: ";
+    cin >> age;
+
+    cout << "Enter your address: ";
+    cin.ignore();
+    getline(cin, address);
+
+    cout << "Enter your weight (kg): ";
+    cin >> weight;
+
+    cout << "Enter your height (cm): ";
+    cin >> height;
+
+    cout << "\nMy name is " << name
+         << ", I am " << age << " years old, "
+         << "I live at " << address
+         << ", my weight is " << weight << " kg, "
+         << "and my height is " << height << " cm." << endl;
+
+    return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    string name, address;
+    int age;
+    float weight, height;
+
+    cout << "Enter your name: ";
+    cin >> name;
+
+    cout << "Enter your age: ";
+    cin >> age;
+
+    cout << "Enter your address: ";
+    cin.ignore();
+    getline(cin, address);
+
+    cout << "Enter your weight (kg): ";
+    cin >> weight;
+
+    cout << "Enter your height (cm): ";
+    cin >> height;
+
+    cout << "\nMy name is " << name
+         << ", I am " << age << " years old, "
+         << "I live at " << address
+         << ", my weight is " << weight << " kg, "
+         << "and my height is " << height << " cm." << endl;
+
+    return 0;
+}
+
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string name;
+        int age;
+        string address;
+        double weight;
+        double height;
+
+        Console.Write("Enter your name: ");
+        name = Console.ReadLine();
+
+        Console.Write("Enter your age: ");
+        age = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter your address: ");
+        address = Console.ReadLine();
+
+        Console.Write("Enter your weight: ");
+        weight = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Enter your height: ");
+        height = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("\nMy name is " + name +
+                          ", I am " + age + " years old, " +
+                          "I live at " + address +
+                          ", my weight is " + weight + " kg, " +
+                          "and my height is " + height + " cm.");
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double x, y, result;
+        char op;
+        char choice;
+
+        do
+        {
+            Console.Write("Enter value of X: ");
+            x = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter value of Y: ");
+            y = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Choose an operator (+, -, *, /): ");
+            op = Convert.ToChar(Console.ReadLine());
+
+            switch (op)
+            {
+                case '+':
+                    result = x + y;
+                    Console.WriteLine("Result: " + result);
+                    break;
+
+                case '-':
+                    result = x - y;
+                    Console.WriteLine("Result: " + result);
+                    break;
+
+                case '*':
+                    result = x * y;
+                    Console.WriteLine("Result: " + result);
+                    break;
+
+                case '/':
+                    if (y != 0)
+                    {
+                        result = x / y;
+                        Console.WriteLine("Result: " + result);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Cannot divide by zero.");
+                    }
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid operator.");
+                    break;
+            }
+
+            Console.Write("\nDo you want to calculate again? (Y/N): ");
+            choice = Convert.ToChar(Console.ReadLine());
+
+        } while (choice == 'Y' || choice == 'y');
+
+        Console.WriteLine("Program ended.");
+    }
+}
